@@ -1,8 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-cn">
-<div class="form-control">
-    {{form.search}}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宿舍查询</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="search1">
+<div class="imglog">
+<img src="{{url_for('static',filename='search/school.png')}}" />
 </div>
-
-
+<form action="" method="post" novalidate>
+<div>
+    {{form.keyword}}
+    {{form.csrf_token}}
+    {{form.submit}}
+</div>
+</form>
+</body>
 </html>

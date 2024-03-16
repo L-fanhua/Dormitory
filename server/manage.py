@@ -4,7 +4,7 @@ from app import create_app
 from flask import render_template
 
 app = create_app()
-
+app.config['SECRET_KEY']="123456"
 
 @app.errorhandler(404)
 def page_not_found(error):

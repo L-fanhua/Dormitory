@@ -1,6 +1,6 @@
 # _*_ coding: utf-8 _*_
 from flask_wtf import FlaskForm
-from wtforms import StringField
+from wtforms import StringField,SubmitField
 from wtforms.validators import DataRequired
 class Search(FlaskForm):
     keyword = StringField(
@@ -12,3 +12,5 @@ class Search(FlaskForm):
             "placeholder": "请输入搜索关键词！",
         }
     )
+    submit = SubmitField(label="提交")
+    
